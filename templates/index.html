@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel to CSV Converter Do With Nibedan</title>
+    <title>Change Background Color</title>
+</head>
+<body>
+    <body style="background-color: #45c61d;"></body>
+    <h1>Excel to CSV Converter With Nibedan</h1>
+
+    {% if success is defined %}
+        {% if success %}
+            <p style="color: rgb(10, 29, 32);">{{ message }}</p>
+        {% else %}
+            <p style="color: red;">{{ message }}</p>
+        {% endif %}
+    {% endif %}
+
+    {% if error is defined %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xls, .xlsx">
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>
